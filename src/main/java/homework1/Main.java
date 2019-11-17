@@ -1,10 +1,10 @@
 package homework1;
 
 import homework1.config.DaoConfig;
+import homework1.config.EventConfig;
 import homework1.config.ServiceConfig;
-import homework1.config.UserConfig;
+import homework1.events.CustomSpringEventPublisher;
 import homework1.service.ServiceInterface;
-import homework1.service.SimpleService;
 import org.springframework.context.annotation.*;
 
 import java.io.IOException;
@@ -16,6 +16,7 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(DaoConfig.class);
         context.register(ServiceConfig.class);
+        context.register(EventConfig.class);
         context.refresh();
 
 
@@ -26,6 +27,8 @@ public class Main {
         myService.enterYouName();
         myService.startTests();
 
+        CustomSpringEventPublisher publisher = context.getBean(CustomSpringEventPublisher.class);
+        publisher.doStuffAndPublishAnEvent("Hello!!!!!!!!!!!!");
     }
 
 

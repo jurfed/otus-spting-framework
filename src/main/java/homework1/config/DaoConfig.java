@@ -26,7 +26,6 @@ public class DaoConfig {
 
     @Bean(name = "simpleDao")
     public TestDao getTestDao() throws FileNotFoundException {
-        String questionsPath;
         String locale = Locale.getDefault().getLanguage();
         if (locale.equals("aspect")) {
             return new SimpleTest(questionFileRu);

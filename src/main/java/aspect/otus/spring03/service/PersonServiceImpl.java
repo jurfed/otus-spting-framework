@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import aspect.otus.spring03.dao.PersonDao;
 import aspect.otus.spring03.domain.Person;
 
-import javax.xml.bind.annotation.XmlAnyElement;
+import java.lang.Deprecated;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -15,7 +15,7 @@ public class PersonServiceImpl implements PersonService {
         this.dao = dao;
     }
 
-@XmlAnyElement
+@Deprecated
     public Person getByName(String name) throws Exception {
 //        dao.findByName2(name);
         return dao.findByName(name);

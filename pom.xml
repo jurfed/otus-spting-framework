@@ -26,28 +26,28 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.1.9.RELEASE</version>
+            <version>5.2.3.RELEASE</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>5.1.9.RELEASE</version>
+            <version>5.2.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>5.2.1.RELEASE</version>
+            <version>5.2.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.9.4</version>
+            <version>1.9.5</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.4</version>
+            <version>1.9.5</version>
         </dependency>
 
 
@@ -55,14 +55,14 @@
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
-            <version>4.0</version>
+            <version>5.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.4</version>
+            <version>1.9.5</version>
         </dependency>
 
     </dependencies>

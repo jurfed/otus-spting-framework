@@ -1,8 +1,9 @@
 package homework1.dao;
 
 import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 
-import javax.xml.bind.annotation.XmlAnyElement;
+//import javax.xml.bind.annotation.XmlAnyElement;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +20,16 @@ public class SimpleTest implements TestDao {
         br = new BufferedReader(new FileReader(file));
     }
 
-    @XmlAnyElement
+    @Deprecated
     @Override
     public void initTests() throws IOException {
         CSVReader csvReader = new CSVReader(br);
-        List<String[]> records = csvReader.readAll();
+        List<String[]> records = null;
+        try {
+            records = csvReader.readAll();
+        } catch (CsvException e) {
+            e.printStackTrace();
+        }
         this.tests = records;
     }
 

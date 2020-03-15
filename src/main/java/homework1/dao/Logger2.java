@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class Logger2 {
 
 //    @Around("target(homework1.dao.TestDao)") //реализующих интерфейс TestDao
-    @Around("@annotation(javax.xml.bind.annotation.XmlAnyElement)")//методы, кот содержат аннотайию XmlAnyElement
+    @Around("@annotation(java.lang.Deprecated)")//методы, кот содержат аннотайию XmlAnyElement
     public Object initTests(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("Вызов методов, реализующих интерфейс TestDao  -  " + joinPoint.getSignature().getName());
         return joinPoint.proceed(joinPoint.getArgs());

@@ -54,14 +54,14 @@ public class SimpleService implements ServiceInterface {
         userDao.setCorrectQuestions(0);
         List<String[]> testSize = testDao.getTests();
 
-        testSize.stream().peek(strings -> {
+        testSize.forEach(strings -> {
             System.out.println("вопрос номер " + strings[0]);
             System.out.println(strings[1]);
             System.out.print(strings[2] + ", " + strings[3] + ", " + strings[4] + " \n");
             Scanner scanner = new Scanner(System.in);
             String markedQuestion = scanner.nextLine();
             checkQuestion(markedQuestion, strings[4]);
-        }).collect(Collectors.toList());
+        });
 
         System.out.println("Dear " + userDao.getName() + "!");
         System.out.println("Your result is: " + userDao.getCorrectQuestions() +" correct answers");

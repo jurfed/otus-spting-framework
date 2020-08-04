@@ -9,6 +9,6 @@ public class EventListener implements ApplicationListener<CustomSpringEvent> {
     @Override
     public void onApplicationEvent(CustomSpringEvent customSpringEvent) {
 
-        System.err.println("Event = " + customSpringEvent.getMessage());
+        System.err.println("Event " + customSpringEvent.getMessage());
     }
 }
